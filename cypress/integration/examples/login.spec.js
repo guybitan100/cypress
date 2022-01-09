@@ -10,9 +10,14 @@ describe('Working with inputs', () => {
 		cy.get('#user_password').clear()
 		cy.get('#user_password').type('Some Invalid password', { delay: 50 })
 	})
-	it('Should submit login form', () => {
-		cy.contains('Sign in').click()
+	it('Should mark checkbox', () => {
+		cy.get('input[type="checkbox"]').click()
 		cy.wait(5000)
+	})
+	it('Should submit login form', () => {
+		//cy.get('[value="Sign in"]').click()
+		// Or
+		cy.contains('Sign in').click()
 	})
 	it('Should display error message', () => {
 		cy.get('.alert-error').should('be.visible')
