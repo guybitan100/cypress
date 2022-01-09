@@ -1,5 +1,4 @@
 {
-  "baseUrl": "my base url here",
   "watchForFileChanges": false,
   "viewportWidth": 1000,
   "viewportHeight": 600,
