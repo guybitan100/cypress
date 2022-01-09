@@ -9,6 +9,7 @@ describe('Working with inputs', () => {
 		//Clear Cookies & Local Storage
 		cy.clearCookie('your item', { log: true })
 		cy.clearLocalStorage('your item', { log: true })
+		cy.title().should('include', 'Zero - Log in')
 	})
 	it('Should fill username', () => {
 		//Set var username to this locator
