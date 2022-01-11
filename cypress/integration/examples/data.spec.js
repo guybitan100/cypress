@@ -6,9 +6,14 @@ describe('Write / Read Data to Json / Text File', () => {
 		cy.writeFile('log.txt', 'Hello World')
 	})
 	it('should read data to json file', () => {
-		cy.readFile('log.json').its('age').should('eq', 25)
+		cy.readFile('log.json').its('age').should('eq', 29)
 	})
 	it('should read data to txt file', () => {
-		cy.readFile('log.txt').its('age').should('eq', 'Hello World')
+		cy.readFile('log.txt').should('eq', 'Hello World')
+	})
+	it('should read and verify browser document content', () => {
+		cy.visit('https://www.example.com')
+		cy.document().its('contentType').should('eq', 'text/html')
+		cy.document().should('have.a.property', 'charset').and('eq', 'UTF-8')
 	})
 })
