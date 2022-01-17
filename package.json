@@ -12,9 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "mochawesome": "^7.0.1",
-    "prettier": "^2.5.1"
-  },
-  "devDependencies": {
-    "cypress": "^9.2.1"
+    "prettier": "^2.5.1",
+	"cypress": "^9.2.1"
   }
 }
