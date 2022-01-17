@@ -1,3 +1,4 @@
+//Base Class
 class BasePage {
 	static loadHomePage() {
 		cy.visit('https://devexpress.github.io/testcafe/example/')
@@ -8,6 +9,7 @@ class BasePage {
 	}
 }
 
+//Class
 class HomePage extends BasePage {
 	static scrollToBottom() {
 		cy.get('#submit-button').scrollIntoView()
@@ -17,6 +19,8 @@ class HomePage extends BasePage {
 		cy.get('header').scrollIntoView()
 	}
 }
+
+//Tests
 describe('Scrolling the page', () => {
 	it('should scroll up and down the page', () => {
 		HomePage.loadHomePage()
