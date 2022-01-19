@@ -19,6 +19,8 @@ describe('Browser Actions', () => {
         //By tag name, Attribute with value, ID and classname
         cy.get('input[placeholder="Email"]#inputEmail.input-full-width')
         //By Text Value inside
-        cy.contains('sign in')
+        cy.contains('Sign in')
+        //By Attribute name and text Value
+        cy.contains('[status="warning"]', 'Sign in')
     })
 })
